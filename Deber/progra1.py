@@ -40,6 +40,36 @@ def heptagonoR():
     lado = int(input('Ingrese la longitud del lado: \n'))   
     temp = perimetroF(7,lado,"Heptagono")
     areaF(temp,apotemaF(lado,7),"Heptagono")#calcula el area
+
+def octagono():
+    print("\t OCTAGONO REGULAR")
+#se puede calcular mediante el ángulo centra lo cual no sirve para sacar el apotema
+    angulo_central=360/8
+#ingresamos el lado 
+    lado=int(input ("Ingrese el lado del octagono regular"))
+#calculo del perimetro n *l
+    perimetro=8*lado
+    apotem=lado/(2*math.tan(angulo_central/2))
+    area=lado= 4*lado*apotem
+
+    print("el perimetro del octagono regular es",perimetro)
+    print (" el apotema es ",apotem)
+    print("el area es ",area)
+
+def eneagono():
+    lado=int(input ("Ingrese el lado del eneagono regular"))
+    perimetro=lado*9
+#Formula sacar el area de una figura de 9 lados
+    area=9*(lado*lado)/(4 * math.tan(180/2))
+    print("el perimetro del eneagono regular es",perimetro)
+    print("el area es ",area)
+def decagono ():
+    lado=int(input ("Ingrese el lado del decagono regular"))
+    perimetro=lado*10
+#Formula sacar el area del decagono
+    area=10*(lado*lado)/(4 * math.tan(180/10))
+    print("el perimetro del decagonno regular es",perimetro)
+    print("el area es ",area)
     
                         #OPERACIONES MATEMATICAS   
 def perimetroF(NumL,LongL,nombre):
@@ -73,6 +103,15 @@ def switch(NumLados):
         repetir()
     elif NumLados == '7':
         heptagonoR()
+        repetir()
+    elif NumLados == '8':
+        octagono()
+        repetir()
+    elif NumLados == '9' :
+        eneagono()
+        repetir()
+    elif NumLados =='10':
+        decagono()
         repetir()
     else:
         print("¡¡ERROR!!..NUMERO DE LADOS DEBE ESTAR EN RANGO DE 3 A 10")
