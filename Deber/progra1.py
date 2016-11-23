@@ -14,6 +14,7 @@ def triangulo():
     perimetro=lado*3
     print('El area del triangulo es: ',area)
     print('El perímetro del triángulo es: ',perimetro)
+    
 
 def cuadrado():
     print('\tCUADRADO')
@@ -22,24 +23,30 @@ def cuadrado():
     perimetro=lado*4 
     print('El area del cuadrado es: ',area)
     print('El perímetro del cuadrado es: ',perimetro)
+    
 
 def pentagonoR():
     print("\tPENTAGONO REGULAR")
     lado = int(input('Ingrese la longitud del lado: \n'))
     temp = perimetroF(5,lado,"Pentagono")
-    areaF(temp,apotemaF(lado,5),"Pentagono")#calcula el area 
+    areaF(temp,apotemaF(lado,5),"Pentagono")#calcula el area
+    creartxt("PENTAGONO_REGULAR")
+    grabartxt(temp,areaF,"PENTAGONO_REGULAR")
     
 def hexagonoR():
     print("\tHEXAGONO REGULAR")
     lado = int(input('Ingrese la longitud del lado: \n'))    
     temp = perimetroF(6,lado,"Hexagono")
     areaF(temp,apotemaF(lado,6),"Hexagono")#calcula el area
+    creartxt("hexagono_regular")
+    grabartxt(temp,areaF,"hexagono_regular")
 
 def heptagonoR():
     print("\tHEPTAGONO REGULAR")
     lado = int(input('Ingrese la longitud del lado: \n'))   
     temp = perimetroF(7,lado,"Heptagono")
     areaF(temp,apotemaF(lado,7),"Heptagono")#calcula el area
+    
 
 def octagono():
     print("\t OCTAGONO REGULAR")
@@ -51,10 +58,10 @@ def octagono():
     perimetro=8*lado
     apotem=lado/(2*math.tan(angulo_central/2))
     area=lado= 4*lado*apotem
-
     print("el perimetro del octagono regular es",perimetro)
     print (" el apotema es ",apotem)
     print("el area es ",area)
+   
 
 def eneagono():
     lado=int(input ("Ingrese el lado del eneagono regular"))
@@ -63,6 +70,8 @@ def eneagono():
     area=9*(lado*lado)/(4 * math.tan(180/2))
     print("el perimetro del eneagono regular es",perimetro)
     print("el area es ",area)
+    
+    
 def decagono ():
     lado=int(input ("Ingrese el lado del decagono regular"))
     perimetro=lado*10
@@ -70,6 +79,7 @@ def decagono ():
     area=10*(lado*lado)/(4 * math.tan(180/10))
     print("el perimetro del decagonno regular es",perimetro)
     print("el area es ",area)
+    
     
                         #OPERACIONES MATEMATICAS   
 def perimetroF(NumL,LongL,nombre):
@@ -87,6 +97,23 @@ def apotemaF(lado,n):
     tangente = math.tan(conversion/2)
     apot = lado/(2*tangente)  
     return apot
+#FUNCIONES PARA CREAR Y GRABAR TXTS
+def creartxt(nombre):
+    name = nombre + ".txt"
+    archi = open(name,"w")
+    archi.close()
+
+def grabartxt(perimetro,area,nombre):
+    name = nombre + ".txt"
+    print(perimetro)
+    print(area)
+    a = str(perimetro)
+    b = str(area)
+    archi=open(name,"a")
+    archi.write("El perimetro es: " + a +"\n")
+    archi.write("El area es: " + b + "\n")
+    archi.close()
+    
                         #MENU Y SWITCH    
 def switch(NumLados):    
     if NumLados=='3':
@@ -129,6 +156,7 @@ def repetir():
     sys.exit()
     
 def main():
+    #creartxt("juanito")
     menu()    #llamamos a la funcion del menu
 
 main()
