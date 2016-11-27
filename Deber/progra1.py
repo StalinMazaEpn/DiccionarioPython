@@ -16,6 +16,8 @@ def triangulo():
     print('El perímetro del triángulo es: ',perimetro)
     
 
+    
+
 def cuadrado():
     print('\tCUADRADO')
     lado=int(input('Ingrese la longitud del lado: \n'))
@@ -113,6 +115,8 @@ def grabartxt(perimetro,area,nombre):
     archi.write("El perimetro es: " + a +"\n")
     archi.write("El area es: " + b + "\n")
     archi.close()
+
+    
     
                         #MENU Y SWITCH    
 def switch(NumLados):    
