@@ -6,7 +6,14 @@ print("\t\t Stalin Maza")
 import sys
 import math
                     #FUNCIONES DE LAS FIGURAS
+def crear_E():
+    archT=open('TRIANGULO.txt','w')
+    archC=open('CUADRADO.txt','w')
+    archT.close()
+    archC.close()
+    
 def triangulo():
+    archT=open('TRIANGULO.txt','a')
     print('\tTRIANGULO')
     lado=int(input('Ingrese la longitud del lado (base):\n'))
     altura=int(input('Ingrese la altura:\n'))
@@ -14,8 +21,10 @@ def triangulo():
     perimetro=lado*3
     print('El area del triangulo es: ',area)
     print('El perímetro del triángulo es: ',perimetro)
-    
-
+    archT.write(str(area))
+    archT.write('\n')
+    archT.write(str(perimetro))
+    archT.close()
     
 
 def cuadrado():
