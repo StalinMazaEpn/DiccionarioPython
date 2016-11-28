@@ -10,6 +10,8 @@ import math
 def crear_E():
     archT=open('TRIANGULO.txt','w')
     archC=open('CUADRADO.txt','w')
+    archO=open('OCTAGONO.txt','w')
+    archO.close()
     archT.close()
     archC.close()
     
@@ -72,6 +74,7 @@ def heptagonoR():
     
 
 def octagono():
+    archO=open('OCTAGONO.txt','a')
     print("\t OCTAGONO REGULAR")
 #se puede calcular mediante el ángulo centra lo cual no sirve para sacar el apotema
     angulo_central=360/8
@@ -84,6 +87,10 @@ def octagono():
     print("el perimetro del octagono regular es",perimetro)
     print (" el apotema es ",apotem)
     print("el area es ",area)
+    archO.write(str(area))
+    archO.write('\n')
+    archO.write(str(perimetro))
+    archO.close()
    
 
 def eneagono():
