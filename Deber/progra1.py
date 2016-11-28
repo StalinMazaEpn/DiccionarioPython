@@ -6,7 +6,7 @@ print("\t\t Stalin Maza")
 import sys
 import math
                     #FUNCIONES DE LAS FIGURAS
-#crear ficheros triangulo, cuadrado
+#crear txt triangulo, cuadrado
 def crear_E():
     archT=open('TRIANGULO.txt','w')
     archC=open('CUADRADO.txt','w')
