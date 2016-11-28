@@ -6,6 +6,7 @@ print("\t\t Stalin Maza")
 import sys
 import math
                     #FUNCIONES DE LAS FIGURAS
+#crear ficheros triangulo, cuadrado
 def crear_E():
     archT=open('TRIANGULO.txt','w')
     archC=open('CUADRADO.txt','w')
@@ -21,6 +22,7 @@ def triangulo():
     perimetro=lado*3
     print('El area del triangulo es: ',area)
     print('El perímetro del triángulo es: ',perimetro)
+    #grabar los resultados en el txt
     archT.write(str(area))
     archT.write('\n')
     archT.write(str(perimetro))
@@ -28,12 +30,18 @@ def triangulo():
     
 
 def cuadrado():
+    archC=open('CUADRADO.txt','a')
     print('\tCUADRADO')
     lado=int(input('Ingrese la longitud del lado: \n'))
     area=lado*lado
     perimetro=lado*4 
     print('El area del cuadrado es: ',area)
     print('El perímetro del cuadrado es: ',perimetro)
+    #grabar los resultaos en txt
+    archC.write(str(area))
+    archC.write('\n')
+    archC.write(str(perimetro))
+    archC.close()
     
 
 def pentagonoR():
@@ -183,6 +191,8 @@ def repetir():
     sys.exit()
     
 def main():
+    #llamar a la funcion crear txt
+    crear_E()
     #creartxt("juanito")
     menu()    #llamamos a la funcion del menu
 
