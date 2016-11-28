@@ -74,6 +74,8 @@ def eneagono():
     area=9*(lado*lado)/(4 * math.tan(180/2))
     print("el perimetro del eneagono regular es",perimetro)
     print("el area es ",area)
+    creartxt("ENEAGONO")
+    grabartxt(perimetro,area,"ENEAGONO")
     
     
 def decagono ():
@@ -117,6 +119,8 @@ def grabartxt(perimetro,area,nombre):
     archi.write("El perimetro es: " + a +"\n")
     archi.write("El area es: " + b + "\n")
     archi.close()
+
+
 
     
     
