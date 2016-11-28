@@ -48,7 +48,9 @@ def heptagonoR():
     lado = int(input('Ingrese la longitud del lado: \n'))   
     temp = perimetroF(7,lado,"Heptagono")
     areaF(temp,apotemaF(lado,7),"Heptagono")#calcula el area
+    #crear el txt de la figura
     creartxt("HEPTAGONO")
+    #guardamos en el txt 
     grabartxt(temp,areaF,"HEPTAGONO")
     
 
@@ -74,7 +76,9 @@ def eneagono():
     area=9*(lado*lado)/(4 * math.tan(180/2))
     print("el perimetro del eneagono regular es",perimetro)
     print("el area es ",area)
+     #crear el txt de la figura
     creartxt("ENEAGONO")
+    #guardamos en el txt 
     grabartxt(perimetro,area,"ENEAGONO")
     
     
@@ -85,6 +89,10 @@ def decagono ():
     area=10*(lado*lado)/(4 * math.tan(180/10))
     print("el perimetro del decagonno regular es",perimetro)
     print("el area es ",area)
+    #crear el txt de la figura
+    creartxt("DECAGONO")
+    #guardamos en el txt 
+    grabartxt(perimetro,area,"DECAGONO")
     
     
                         #OPERACIONES MATEMATICAS   
