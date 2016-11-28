@@ -48,6 +48,8 @@ def heptagonoR():
     lado = int(input('Ingrese la longitud del lado: \n'))   
     temp = perimetroF(7,lado,"Heptagono")
     areaF(temp,apotemaF(lado,7),"Heptagono")#calcula el area
+    creartxt("HEPTAGONO")
+    grabartxt(temp,areaF,"HEPTAGONO")
     
 
 def octagono():
